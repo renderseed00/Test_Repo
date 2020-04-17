@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project H - by Renderseed Labs and Motion Studios</title>
+    <meta name="description" content="DEMO" />
+    <meta name="keywords" content="DEMO" />
+    <meta name="author" content="Arnold Takundwa" />
+    <link rel="shortcut icon" href="favicon(4).ico">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/nav-style2.css">
+    <link rel="stylesheet" type="text/css" href="css/foundation.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+
+
+    <style>
+      
+      body {
+        font-family: candara, sans-serif;
+      }
+      h1 h2 h3 h4 {
+        font-family: candara, sans-serif;
+      }
+      a:hover {
+        color: #cea17f;
+      }
+      *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+      }
+      img{
+        max-width:100%;
+      }
+      h2{
+        font-size:2.5em;
+      }
+
+      header{
+        position:fixed;
+        flex-flow: row wrap;
+        width:100%;
+        top:0;
+        left:0;
+        z-index:9;
+      }
+      header .container{
+        display:flex;
+        flex-flow: row wrap;
+        align-items:center;
+        padding:15px 0;
+      }
+
+      .container{
+        width:90%;
+        margin:auto;
+      }
+      #button-home {
+        background: #cea17f;
+      }
+
+      #button-home:hover {
+        background: #000000;
+      }
+
+      #button-about {
+        background: #000000;
+      }
+
+      #button-about:hover {
+        background: #9f9fa1;
+      }
+
+
+      nav {
+          justify-content: flex-end;
+          display: flex;
+          flex: 2 auto;
+      }
+      nav ul{
+        list-style:none;
+        padding:0;
+        margin:0;
+        display:flex;
+        flex-direction: row;
+      }
+      nav ul li{
+        padding:0.5em;
+      }
+      nav ul li a{
+        color:#fff;
+        text-decoration:none;
+        display:inline-block;
+      }
+
+      #section0{
+        padding-top: 120px;
+      }
+
+      .home{
+      background:url('img/grid_o2.jpg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: repeat-x;
+        height:100%;
+        display: flex;
+        align-items:center;
+        text-align:center;
+        position:relative;
+        z-index:0;
+        border-style: solid;
+        border-color: black;
+      }
+      .home:after{
+        display:block;
+        background:rgba(0,0,0,0);
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+      }
+      .concept{
+      background:url('img/concept_bg3.jpg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: repeat-x;
+        height:100%;
+        display: flex;
+        align-items:center;
+        text-align:center;
+        position:relative;
+        z-index:0;
+        border-style: solid;
+        border-color: black;
+      }
+      .concept:after{
+        display:block;
+        background:rgba(0,0,0,0);
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+      }
+      .story{
+      background:url('img/story_bg3.jpg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: repeat-x;
+        height:100%;
+        display:flex;
+        align-items:center;
+        text-align:center;
+        position:relative;
+        z-index:0;
+        border-style: solid;
+        border-color: black;
+      }
+      .story:after{
+        display:block;
+        background:rgba(0,0,0,0);
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+      }
+      .vehicles{
+      background:url('img/vehicles_bg3b.jpg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: repeat-x;
+        height:100%;
+        display:flex;
+        align-items:center;
+        text-align:center;
+        position:relative;
+        z-index:0;
+        border-style: solid;
+        border-color: #ffffff;
+      }
+
+      .vehicles h1, .vehicles h4, .vehicles p{
+        color: #ffffff;
+      }
+
+      .vehicles:after{
+        display:block;
+        background:rgba(0,0,0,0);
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+      }
+      .characters{
+      background:url('img/characters_bg4.jpg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: repeat-x;
+        height:100%;
+        display:flex;
+        align-items:center;
+        text-align:center;
+        position:relative;
+        z-index:0;
+      }
+      .characters:after{
+        display:block;
+        background:rgba(0,0,0,0);
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+      }
+      .about{
+      background:url('img/about_bg.jpg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: repeat-x;
+        height:100%;
+        display:flex;
+        align-items:center;
+        text-align:center;
+        position:relative;
+        z-index:0;
+      }
+      .about:after{
+        display:block;
+        background:rgba(0,0,0,0);
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+      }
+
+
+
+
+
+
+
+
+
+
+/*Header*/
+      header.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity:0;
+        visibility:hidden;
+        transform:translate(0, -200px);
+      }
+
+      header.in-view{
+        opacity:1;
+        visibility:visible;
+        transition: all 0.3s ease;
+        transform:translate(0, 0);
+      }
+
+      @media only screen and (max-width: 640px) {
+        header.fixed{
+          position:relative;
+        }
+      }
+
+      header{
+        background: #000000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999px;
+      }
+
+
+
+
+/*Footer*/
+      .social-footer {
+        padding: 1rem;
+        background: #000000;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+      }
+
+      .social-footer .social-footer-icons li:last-of-type {
+        margin-right: 0;
+      }
+
+      .social-footer .social-footer-icons .fa {
+        font-size: 1.3rem;
+        color: #fefefe;
+      }
+
+      .social-footer .social-footer-icons .fa:hover {
+        color: #cea17f;
+        transition: color 0.3s ease-in;
+      }
+
+      #footer-text {
+        color: #ffffff;
+      }
+
+
+      .headings-1{
+        font-family: Eras ITC;
+        font-weight: bolder;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+
+      #home-text{
+        font-family: Eras ITC;
+        text-align: center;
+        padding: 35px;
+      }
+
+      #concept-text{
+        text-align: center;
+        padding: 15px;
+      }
+
+      #story-text{
+        text-align: center;
+        padding: 15px;
+      }
+
+      #vehicle-text{
+        font-family: Eras ITC;
+        margin-top: 35px;
+      }
+
+      #characters-text{
+        font-family: Eras ITC;
+        margin-top: 35px;
+      }
+
+      #about-text{
+        font-family: Eras ITC;
+        margin-top: 35px;
+      }
+
+
+      /* Media Queries */
+      /* Small devices (landscape phones, 544px and up) */
+
+        @media (max-width: 200px) {  
+
+
+        }
+
+
+
+
+
+        @media (min-width: 200px) {  
+
+
+        }
+
+
+        @media (min-width: 544px) {  
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+    </style>
+<script type="text/javascript">
+  
+
+$(window).scroll(function() {
+  var header = $(document).scrollTop();
+  var headerHeight = $(".header").outerHeight();
+  var firstSection = $(".main-container section:nth-of-type(1)").outerHeight();
+  if (header > headerHeight) {
+    $(".header").addClass("fixed");
+  } else {
+    $(".header").removeClass("fixed");
+  }
+  if (header > firstSection) {
+    $(".header").addClass("in-view");
+  } else {
+    $(".header").removeClass("in-view");
+  }
+});
+
+
+</script>
+
+  </head>
+  <body>
+
+
+
+
+
+<header class="header">
+    <div class="responsive-nav-social-mobile" data-responsive-toggle="responsive-nav-social" data-hide-for="medium">
+      <div class="responsive-nav-social-mobile-left">
+        <a class="" href="#"><img src="img/Logo_Letter.png" alt="Motion Labs" height="26"></a>
+      </div>
+      <div class="responsive-nav-social-mobile-right">
+        <button class="menu-icon" type="button" data-toggle="responsive-nav-social"></button>
+      </div>
+    </div>
+
+    <div data-sticky-container>
+      <div class="responsive-nav-social" id="responsive-nav-social" >
+        <div class="row align-justify align-middle" id="responsive-menu">
+          <div class="responsive-nav-social-left">
+            <ul class="menu vertical medium-horizontal">
+              <li><a href="#section0">HOME</a></li>
+              <li><a href="#section1">CONCEPT</a></li>
+              <li><a href="#section2">STORY</a></li>
+              <li><a href="#section3">VEHICLES</a></li>
+              <li><a href="#section4">CHARACTERS</a></li>
+              <li><a href="#section5">ABOUT</a></li>
+            </ul>
+          </div>
+          <div class="responsive-nav-social-right hide-for-small-only">
+            <a class="topbar-responsive-logo" href="#"><img src="img/Motion_Logo_Header_.png" alt="Motion Labs" height="26"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</header>
+
+
+
+
+<div class="main-container">
+
+<section class="home" id="section0" data-anchor="op-section second" style="">
+
+  <div class="grid-container">
+    <div class="grid-x">
+
+        <div class="cell small-auto medium-6 large-6">
+          <img id="concept-img" src="img/one.png" style="">
+        </div>
+
+        <div class="cell small-auto medium-6 large-6">
+          <div class="">
+            <img id="" class="" src="img/NGP_Logo.png" alt="NGP Logo" style="">
+            <div class="">
+              <h1 class="headings-1" style="">THE STORY OF THE NEXUS GRAND PRIX</h1>
+              <a href="#section2" id="button-home" class="button large">STORY</a>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+    <div class="grid-x grid-padding-x grid-padding-y">
+       <h3 id="home-text">As an annual tradition for over 75 years, the Nexus Grand Prix is the true test of skill and will for “Hybrid Pilots” in the Nexus System. It is the final leg of an eight-round series, designed to crown the best H-Pilot.</h3>
+    </div>
+
+  </div>
+
+  </section>
+
+
+
+
+
+  <section class="concept" id="section1" data-anchor="op-section second">
+
+  <div class="grid-container">
+    <div class="grid-x">
+      <div class="cell">
+        <h1 class="headings-1" class="text-center">Welcome to the Nexus Grand Prix</h1>
+      </div>
+    </div>
+
+    <div class="grid-x grid-margin-x grid-margin-y">
+        <div class="cell small-auto medium-6 large-6">
+          <img id="concept-img" src="img/gamma_Crop.png" style="">
+        </div>
+
+
+        <div class="cell small-auto medium-6 large-6">
+          <div class="grid-x grid-margin-x grid-margin-y">
+            <div class="cell">
+              <img id="concept-img" class="thumbnail" src="img/concept_2.jpeg" alt="NGP Starting Line" style="">
+            </div>
+            <div class="cell">
+              <img id="concept-img" class="thumbnail" src="img/concept_3.jpeg" alt="NGP Starting Line" style="">
+            </div>
+          </div>
+        </div>
+          <h4 id="concept-text">The Nexus Grand Prix was established as a competition between the two labor factions of the Nexus System; The Drone Collective and The Alliance Class. The winner is granted “Royal Credits,” which are evenly dispersed across the colonies of the winning faction.</h4>
+          <img id="concept-img" class="thumbnail" src="img/concept_4.jpeg" alt="NGP Starting Line" style="">
+        </div>
+    </div>
+
+  </section>
+
+
+  <section class="story" id="section2" data-anchor="op-section third">
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x grid-margin-y">
+        <div class="cell">
+          <h1 class="headings-1" class="text-center">The Race For Nexus</h1>
+        </div>
+      </div>
+
+      <div class="grid-x grid-margin-x grid-margin-y">
+
+          <div class="cell small-auto medium-6 large-6">
+            <div class="grid-x grid-margin-x grid-margin-y">
+              <div class="cell">
+                <img id="concept-img" class="thumbnail" src="img/story_2.jpg" alt="NGP Starting Line" style="">
+              </div>
+              <div class="cell">
+                <img id="concept-img" class="thumbnail" src="img/story_3.jpeg" alt="NGP Starting Line" style="">
+              </div>
+            </div>
+          </div>
+
+          <div class="cell small-auto medium-6 large-6">
+            <img id="concept-img" src="img/alpha_Crop.png" style="">
+            <h4 id="story-text">The Nexus Grand Prix takes place on Nexus Prime, the home planet of the Nexus system.</h4>
+          </div>
+
+
+            <h4 id="story-text">The Aegis region has been home to the NGP final for the last 48 years (since the end of the Mystic Wars). Located on the southern pole of the planet Nexus, it consists of a cluster of fractal glaciers surrounded by a large body of arctic water</h4>
+
+          </div>
+      </div>
+  </section>
+
+
+  <section class="vehicles" id="section3" data-anchor="op-section fourth">
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x grid-margin-y">
+        <div class="cell">
+          <h1 class="headings-1" class="text-center">Vehicles</h1>
+        </div>
+      </div>
+
+      <div class="grid-x grid-margin-x grid-margin-y">
+        <div class="cell small-auto medium-12 large-12">
+          <h4 id="vehicle-text" class="text-center">The NGP pits the state of the art technologies from the Drone Collective against the artfully manufactured vehicles from the Alliance Class.</h4>
+        </div>
+      </div>
+
+
+
+      <div class="grid-x grid-margin-x grid-margin-y">
+        <div class="cell">
+          <h1 class="headings-1" class="text-center">Alliance Class</h1>
+          <h4 id="vehicle-text" class="text-center">The NGP pits the state of the art technologies from the Drone Collective against the artfully manufactured vehicles from the Alliance Class.</h4>
+        </div>
+      </div>
+
+      <div class="grid-x grid-margin-x grid-margin-y">
+        <div class="cell small-auto medium-12 large-12">
+          <img id="concept-img" class="thumbnail" src="img/vehicles_1.jpg" alt="NGP Starting Line" style="">
+          <p>Beta (G Series) Alliance Class</p>
+        </div>
+
+
+      </div>
+      <div class="grid-x grid-margin-x grid-margin-y">
+        <div class="cell small-auto medium-6 large-6">
+          <img id="concept-img" class="thumbnail" src="img/vehicles_2.jpg" alt="NGP Starting Line" style="">
+          <p>Alpha (T Series) Alliance Class</p>
+        </div>
+
+        <div class="cell small-auto medium-6 large-6">
+          <img id="concept-img" class="thumbnail" src="img/vehicles_3.jpg" alt="NGP Starting Line" style="">
+          <p>Gamma (F-H Series) Alliance Class</p>
+        </div>
+      </div>
+
+
+
+      <div class="grid-x grid-margin-x grid-margin-y">
+        <div class="cell">
+          <h1 class="headings-1" class="text-center">Drone Class</h1>
+          <h4 id="vehicle-text" class="text-center">The NGP pits the state of the art technologies from the Drone Collective against the artfully manufactured vehicles from the Alliance Class.</h4>
+        </div>
+      </div>
+
+      <div class="grid-x grid-margin-x grid-margin-y">
+        <div class="cell small-auto medium-6 large-6">
+          <img id="concept-img" class="thumbnail" src="img/vehicles_4.jpg" alt="NGP Starting Line" style="">
+          <p>DC I Drone Class</p>
+        </div>
+        <div class="cell small-auto medium-6 large-6">
+          <img id="concept-img" class="thumbnail" src="img/vehicles_5.jpg" alt="NGP Starting Line" style="">
+          <p>DC II Drone Class</p>
+        </div>
+
+      </div>
+      <div class="grid-x grid-margin-x grid-margin-y">
+        <div class="cell small-auto medium-6 large-6">
+          <img id="concept-img" class="thumbnail" src="img/vehicles_6.jpg" alt="NGP Starting Line" style="">
+          <p>DC III Drone Class</p>
+        </div>
+
+        <div class="cell small-auto medium-6 large-6">
+          <img id="concept-img" class="thumbnail" src="img/vehicles_7.jpg" alt="NGP Starting Line" style="">
+          <p>DC IV Drone Class</p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+
+  <section class="characters" id="section4" data-anchor="op-section fifth">
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x grid-margin-y">
+        <div class="cell">
+          <h1 class="headings-1" class="text-center">Alliance Class Pilots</h1>
+          <h4 id="characters-text" class="text-center">While the Drone Collective manufactures the latest in Hybrid Fusion Technology, the Alliance Class selects four of its best H-Pilots to compete in the NGP. The NGP is a true competition of Machine VS Man.</h4>
+        </div>
+      </div>
+
+      <div class="grid-x grid-margin-x grid-margin-y">
+        <div class="cell small-auto medium-6 large-6">
+          <img id="concept-img" class="thumbnail" src="img/characters_1-1.jpg" alt="NGP Starting Line" style="">
+          <p>Mina (Beta Alliance Class Pilot)</p>
+        </div>
+        <div class="cell small-auto medium-6 large-6">
+          <img id="concept-img" class="thumbnail" src="img/characters_2.jpeg" alt="NGP Starting Line" style="">
+          <p>Selic (Beta Alliance Class Pilot)</p>
+        </div>
+
+      </div>
+      <div class="grid-x grid-margin-x grid-margin-y">
+        <div class="cell small-auto medium-6 large-6">
+          <img id="concept-img" class="thumbnail" src="img/characters_3.jpg" alt="NGP Starting Line" style="">
+          <p>Molena (Alpha Alliance Class Pilot)</p>
+        </div>
+
+        <div class="cell small-auto medium-6 large-6">
+          <img id="concept-img" class="thumbnail" src="img/characters_4.jpeg" alt="NGP Starting Line" style="">
+          <p>Adrian (Gamma Alliance Class Pilot</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="about" id="section5" data-anchor="op-section last">
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x grid-margin-y">
+        <div class="cell">
+          <h1 class="headings-1" class="text-center">About</h1>
+        </div>
+      </div>
+
+      <div class="grid-x grid-margin-x grid-margin-y">
+        <div class="cell small-auto medium-6 large-6">
+          <img id="concept-img" class="" src="img/about_3.png" alt="NGP Starting Line" style="">
+        </div>
+        <div class="cell small-auto medium-6 large-6">
+          <h4 id="about-text" class="text-center">Project H is the brainchild of Arnold Takundwa, a digital artist from Birmingham, Alabama. Produced by Renderseed Labs and Motion Studios, Project H is an animation short inspired by Arnold’s love of futuristic racing games, such as F-Zero and Wipeout.
+          Project H was created using Autodesk Maya, Z-Brush, Nuke-X, Adobe After Effects, Adobe Photoshop, and Adobe Premiere.</h4>
+          <a href="https://www.renderseedlabs.com" id="button-about" class="button large" target="_blank">VISIT</a>
+        </div>
+      </div>
+
+      <div class="grid-x grid-margin-x grid-margin-y">
+        <div class="cell small-auto medium-6 large-6">
+          <img id="concept-img" class="thumbnail" src="img/about_1.jpeg" alt="NGP Starting Line" style="">
+        </div>
+
+        <div class="cell small-auto medium-6 large-6">
+          <img id="concept-img" class="thumbnail" src="img/about_2.jpeg" alt="NGP Starting Line" style="">
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+
+<footer class="social-footer">
+  <div class="social-footer-left">
+    <a href="#"><img class="logo" src="img/Motion_Logo_Header_small.png"></a>
+  </div>
+
+  <div class="social-footer-icons">
+    <ul class="menu simple">
+      <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+      <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+      <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+    </ul>
+  </div>
+</footer>
+
+
+
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="node_modules/what-input/dist/what-input.js"></script>
+    <script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
